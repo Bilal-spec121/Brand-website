@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Brand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ******** Header portion satrted ******** -->
+  <header>
+
+   <!--(A)first (top header)-->
+    <div id="top_header">
+      <!-- (1)logo section-->
+      
+        <!--logo starts here-->
+        <div  id="main_logo" class="logo">
+          <a href="#">
+            <img id="main_logo_symbol" class="logo_symbol" src="assets/header_section_assets/logo-symbol.svg">
+            <img id="main_logo_txt" class="logo_txt" src="assets/header_section_assets/Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+      
+      <!---->
+      <!-- (2)Search section-->
+      <div id="search_container"> 
+          
+          <input id="input_srch" type="text" placeholder="Search">
+        
+          <select id="category_selector">
+            <option>All category</option>
+          </select>
+        
+          <button id="search_btn">Search</button>
+          
+      </div>
+      <!---->
+      <!-- (3)actions section-->
+      <div id="actions_container">
+          <div id="profile">
+            <img src="assets/header_section_assets/profile.svg">
+            <a href="#">Profile</a> 
+          </div>
+          <div id="message">
+            <img src="assets/header_section_assets/message.svg">
+            <a href="#">Message</a>
+          </div>
+          <div id="orders">
+            <img src="assets/header_section_assets/orders.svg">
+            <a href="#">Orders</a>  
+          </div>
+          <div id="My_cart">
+            <img src="assets/header_section_assets/shopping_cart.svg">
+            <a href="web-cart/webcart.html">My cart</a>
+          </div>  
+      </div>
+      <!---->
+    </div>
+
+<!-- (B) second (navbar)-->
+    <nav id="nav_bar">
+      <!-- (1) nav items section -->
+      <div id="navlist">
+        <div id ="menu_and_category">
+          <a id="menu-icon"><img src="assets/header_section_assets/menu_icon.svg"></a>
+          <a href="web-listview/web_listview.html" id="navbar-item1">All category</a>
+        </div>
+        <a href="#section_sale" id="navbar-item2">Hot offers</a>
+        <a href="#" id="navbar-item3" onclick="gift_box_openModal()">Gift boxes</a>
+        <a href="#" id="navbar-item4">Projects</a>
+        <a href="#" id="navbar-item5">Menu item</a>
+        <select id="navbar_item_dropdown">
+          <option >Help</option>
+        </select>
+
+      </div>
+
+      <!--gift box started-->
+
+        <!-- Popup Modal -->
+        <div id="gift_box_modal" class="gift_box_modal">
+          <div class="gift_box_modal_content">
+            <!-- Close button -->
+            <span class="gift_box_close_btn" onclick="gift_box_closeModal()">✖</span>
+
+            <h2>🎁 Gift Boxes for Every Occasion</h2>
+            <p>Choose from our exclusive range of hand-picked gift boxes designed to celebrate life’s most precious moments.</p>
+
+            <!-- Grid of Gift Boxes -->
+            <div class="gift_box_grid">
+              <!-- Gift 1 -->
+              <div class="gift_box_item">
+                <img src="assets/first-page-content-assets/birthday_box.png" alt="Birthday Box">
+                <h3>🎉 Birthday Bliss Box</h3>
+                <p>Includes candles, chocolates, a party hat, and a heartfelt card.</p>
+                <span class="gift_box_price">$29.99</span>
+                <button>Buy Now</button>
+              </div>
+
+              <!-- Gift 2 -->
+              <div class="gift_box_item">
+                <img src="assets/first-page-content-assets/wedding_box.png" alt="Wedding Box">
+                <h3>💍 Wedding Elegance Box</h3>
+                <p>Includes champagne glasses, roses, and a personalized note.</p>
+                <span class="gift_box_price">$49.99</span>
+                <button>Buy Now</button>
+              </div>
+
+              <!-- Gift 3 -->
+              <div class="gift_box_item">
+                <img src="assets/first-page-content-assets/holiday_box.png" alt="Holiday Box">
+                <h3>❄️ Holiday Cheer Box</h3>
+                <p>Includes cookies, socks, and hot cocoa mix.</p>
+                <span class="gift_box_price">$39.99</span>
+                <button>Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <script>
+      // Function to open popup
+      function gift_box_openModal() {
+        document.getElementById("gift_box_modal").style.display = "flex";
+      }
+
+      // Function to close popup
+      function gift_box_closeModal() {
+        document.getElementById("gift_box_modal").style.display = "none";
+      }
+      </script>
+      <!--gift box ended-->
+     
+      <!-- (2) language section -->
+      
+        <select name="languages" id="languages" class="inter-font">
+          <option value="English, USD" selected>English, USD</option>
+          <option value="Urdu">Urdu</option>
+          <option value="Bengali">Bengali</option>
+        </select>
+        
+      
+      <!-- (3) ship to section -->
+      <div id="ship_to">
+        <div  id="ship_text">Ship to</div>
+
+        <div id="country_selector">
+          <div class="selected">
+           <img src="assets/header_section_assets//icon.svg" class="flag1" alt="Germany">
+           <img src="assets/header_section_assets//expand_more.svg" class="icon1" alt="Dropdown">
+          </div>
+           <ul class="menu">
+            <li data-value="Germany"><img src="assets/header_section_assets//icon.svg" class="flag1"> Germany</li>
+            <li data-value="France"><img src="assets/header_section_assets//france-flag-icon.svg" class="flag1"> France</li>
+            <li data-value="Italy"><img src="assets/header_section_assets//italy-flag-icon.svg" class="flag1"> Italy</li>
+           </ul>
+        </div>
+      </div>
+      <!---->
+
+    </nav>
+    
+   </header>
+ <!-- ****************** Header portion Ended **************** -->
+
+ <!-- ***************** main started ********************-->
+
+ <main>
+  <!-- ****** (A)Hero section started ******-->
+  <div id="hero_section">
+
+    <!--1-->
+     <div id="hero_menu">
+      
+       <ul>
+         <li class="hero_menu_item" id="hero_menu_active"><div>Automobiles</div></li>
+         <li class="hero_menu_item"><div>Clothes and wear</div></li>
+         <li class="hero_menu_item"><div>Home interiors</div></li>
+         <li class="hero_menu_item"><div>Computer and tech</div></li>
+         <li class="hero_menu_item"><div>Tools, equipments</div></li>
+         <li class="hero_menu_item"><div>Sports and outdoor</div></li>
+         <li class="hero_menu_item"><div>Animal and pets</div></li>
+         <li class="hero_menu_item"><div>Machinery tools</div></li>
+         <li class="hero_menu_item"><div>More category</div></li>
+       </ul>
+
+     </div>
+    <!---->
+    <!--2-->
+    <div id="hero_banner" style="background-image: url('assets/first-page-content-assets/Hero_banner.svg');">
+      <div id="hero_banner_textbox"> 
+        <div id="banner_textbox_text1">Latest trending</div>
+        <div id="banner_textbox_text2">Electronic items</div>
+      </div>
+      <button><p>Learn more</p></button>
+    </div>
+    <!---->
+    <!--3-->
+    <div id="hero_rectangle_300">
+      <span id="rectangle_300_avatar"><img src="assets/first-page-content-assets/Avatar_frame.svg" ></span>
+      <p>Hi, user<br>let's get stated</p>
+      <button id="rectangle_300_btn_join">Join now</button>
+      <button id="rectangle_300_btn_login">Log in</button>
+    </div>
+    <!---->
+    <!--4-->
+    <div id="hero_block1">
+      <p>Get US $10 off<br>with a new<br>supplier</p>
+    </div>
+    <!---->
+    <!--5-->
+    <div id="hero_block2">
+      <p>Send quotes with supplier<br>preferences</p>
+    </div>
+    <!---->
+
+  </div>
+  <!-- ****** Hero section Ended ******-->
+  <!-- ****** (B) Sale section started ******-->
+  <div id="section_sale">
+    <!--a) countdown-->
+    <div id="section_sale_countdown">
+
+        <div id="deals_and_offers">
+          Deals and offers
+        </div>
+        <div id="hygiene_equipments">
+          Hygiene equipments
+        </div>
+        <div id="section_sale_countdown_time">
+          <div class="countdown_time_boxes">
+            <div id="timebox_count1">04</div>
+            <div id="timebox_text1">Days</div>
+          </div>
+          <div class="countdown_time_boxes">
+            <div id="timebox_count2">13</div>
+            <div id="timebox_text2">Hour</div>
+          </div>
+          <div class="countdown_time_boxes">
+            <div id="timebox_count3">34</div>
+            <div id="timebox_text3">Min</div>
+          </div>
+          <div class="countdown_time_boxes">
+            <div id="timebox_count4">56</div>
+            <div id="timebox_text4">Sec</div>
+          </div>
+        </div>
+
+    </div>
+    <!--b)sale item list-->
+    <div id="section_sale_items_list">
+      <!--item1-->
+      <div class="section_sale_itemslist_items">
+        <a href="web-detail/web_detail.html">
+          <div id="section_sale_item1_img">
+            <img src="assets/first-page-content-assets/smart_watch.svg">
+          </div>
+          <div id="section_sale_item1_info">
+            <div id="section_sale_item1_info_text">Smart watches</div>
+            <div class="section_sale_item_info_badges">-25%</div>
+          </div>
+        </a>
+      </div>
+      <!--item2-->
+      <div class="section_sale_itemslist_items">
+      
+        <a href="web-detail/web_detail.html">
+          <div id="section_sale_item2_img">
+            <img src="assets/first-page-content-assets/laptop.svg" >
+          </div>
+          <div id="section_sale_item2_info">
+            <div id="section_sale_item2_info_text">Laptops</div>
+            <div class="section_sale_item_info_badges">-15%</div>
+          </div>
+        </a>
+      </div>
+      <!--item3-->
+      
+        <div class="section_sale_itemslist_items">
+          <a href="web-detail/web_detail.html">
+            <div id="section_sale_item3_img">
+              <img src="assets/first-page-content-assets/go_pro_camera.svg" >
+            </div>
+            <div id="section_sale_item3_info">
+              <div id="section_sale_item3_info_text">GoPro cameras</div>
+              <div class="section_sale_item_info_badges">-40%</div>
+            </div> 
+          </a>
+        </div>
+     
+      
+      <!--item4-->
+      <div class="section_sale_itemslist_items">
+        <a href="web-detail/web_detail.html">
+          <div id="section_sale_item4_img">
+            <img src="assets/first-page-content-assets/headphones.svg" >
+          </div>
+          <div id="section_sale_item4_info">
+            <div id="section_sale_item4_info_text">Headphones</div>
+            <div class="section_sale_item_info_badges">-25%</div>
+          </div>
+        </a>
+      </div>
+      <!--item5-->
+      <div class="section_sale_itemslist_items">
+        <a href="web-detail/web_detail.html"> 
+          <div id="section_sale_item5_img">
+            <img src="assets/first-page-content-assets/mobile_photo.svg" >
+          </div>
+          <div id="section_sale_item5_info">
+            <div id="section_sale_item5_info_text">Canon cameras</div>
+            <div class="section_sale_item_info_badges">-25%</div>
+          </div>
+        </a> 
+      </div>
+      <!---->
+
+    </div>
+    <!---->
+  </div>
+
+  <!-- ****** Sale section ended ******-->
+  <!-- ****** (C) Block item group1 started ******-->
+  <div id="block_item_group1" class="block_item_group">
+    <!--a-->
+    <div id="block_item_group1_left_aside" class="block_item_group_left_aside" style="background-image: url('assets/first-page-content-assets/block_group/block1_aside.svg');">
+      <div id="block_item_group1_left_aside_text">Home and outdoor</div>
+      <div id="block_item_group1_left_aside_button"class="block_item_group_left_aside_button">Source now</div>
+    </div>
+    <!--b-->
+    <div class="block_item_group_others">
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Soft chairs</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 19</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/soft_chair.svg" ></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Sofa & chair</div>
+        <div class="block_item_group_items_text2"><p>From</p>USD 19<p></p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/lamp.svg" ></div>
+      </div> 
+      
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Kitchen dishes</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 19</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/kitchen_dishes.svg" ></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Smart watches</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 19</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/pot.svg" ></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Kitchen mixer</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 100</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/kitchen_mixer.svg" alt=""></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Blenders</div>
+        <div class="block_item_group_items_text2"><p>From</p><P>USD 39</P></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/blender.svg" alt=""></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Home appliance</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 19</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/rasm.svg" alt=""></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Coffee maker</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 10</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group/plant.svg" alt=""></div>
+      </div>
+
+    </div>
+    <!---->
+  </div>
+ <!-- ******  Block item group ended ******-->
+
+ <!-- ****** (D) Block item group started ******-->
+  <div id="block_item_group2" class="block_item_group">
+    <!--a-->
+    <div id="block_item_group2_left_aside" class="block_item_group_left_aside" style="background-image: url('assets/first-page-content-assets/block_group2/block2_aside.svg');">
+      <div id="block_item_group2_left_aside_text">Consumer electronics and gadgets</div>
+      <div id="block_item_group2_left_aside_button" class="block_item_group_left_aside_button">Source now</div>
+    </div>
+    <!--b-->
+    <div class="block_item_group_others">
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Smart watches</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 19</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/smart_watch.svg" ></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Cameras</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 89</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/smart_watch.svg" ></div>
+      </div> 
+      
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Headphones</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 10</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/headphones.svg" ></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Smart watches</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 90</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/electric_kettle.svg" ></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Gaming set</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 35</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/gaming_set.svg" alt=""></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Laptop & PC</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 340</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/laptop.svg" alt=""></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Smartphones</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 19</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/smart_phones.svg" alt=""></div>
+      </div>
+
+      <div class="block_item_group_items">
+        <div class="block_item_group_items_text1">Electric kattle</div>
+        <div class="block_item_group_items_text2"><p>From</p><p>USD 240</p></div>
+        <div class="block_item_group_items_img"><img src="assets/first-page-content-assets/block_group2/mobile.svg" alt=""></div>
+      </div>
+
+    </div>
+    <!---->
+  </div>
+ <!-- ******  Block item group ended ******-->
+
+ <!-- ******   Section Inquiry started ******-->
+  
+  <div id="section_inquiry">
+    
+    <div id="mask_group" style="background-image: url('assets/first-page-content-assets/section_inquiry.svg');"></div>
+      
+    <div id="section_inquiry_info">
+        <div id="section_inquiry_info_text1">
+          An easy way to send<br>requests to all suppliers
+        </div>
+        <div id="section_inquiry_info_text2">
+          Lorem ipsum dolor sit amet, consectetur adipisicing<br>elit, sed do eiusmod tempor incididunt.
+        </div>
+    </div>
+
+    <div id="section_inquiry_form">
+      <div id="section_inquiry_form_text">Send quote to suppliers</div>
+      <input id="section_inquiry_form_input" type="text" placeholder="What item you need?">
+      <textarea id="section_inquiry_textarea" placeholder="Type more details"></textarea>
+      <input id="section_inquiry_form_quantity_input" type ="text" placeholder="Quantity">
+      <select name="" id="pcs">
+        <option selected hidden>Pcs</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <button id="section_inquiry_form_btn">Send inquiry</button>
+
+    </div>
+
+  </div>
+
+
+ <!-- ******   Section Inquiry started ******-->
+
+ <!-- ******   Section recommended section started ******-->
+
+  <div id="section_recommend">
+    <!--a-->
+    <div id="section_recommend_title">
+      Recommended items
+    </div>
+    <!--b-->
+    <div id="section_recommend_items_block">
+
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card1.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card2.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card3.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card4.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card5.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card6.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card7.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card8.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card9.svg" >
+        </a>
+      </div>
+      <div class="section_recommend_items_block_cards">
+        <a href="web-detail/web_detail.html">
+          <img src="assets/first-page-content-assets/cards/card10.svg" >
+        </a>
+      </div>
+
+    </div>
+    <!---->
+  </div>
+
+
+ <!-- ******   Section recommended section ended ******-->
+
+ <!-- ******   Section service section started ******-->
+
+ <div id="section_service">
+
+  <!--1-->
+  <div id="section_service_title">
+    Our extra services
+  </div>
+  <!--2-->
+  <div id="card1" class="section_service_card">
+    <!--a-->
+    <div class="section_service_card_mask">
+      <img src="assets/first-page-content-assets/service_section_1.svg" >
+    </div>
+    <!--b-->
+    <div class="section_service_card_text">
+      Source from <br> Industry Hubs
+    </div>
+    <!--c-->
+    <div class="section_service_card_ellipse"></div>
+    <!--d-->
+    <div class="section_service_card_icon">
+      <img src="assets/first-page-content-assets/search.svg" >
+    </div>
+    <!---->
+  </div>
+  <!--3-->
+  <div id="card2" class="section_service_card">
+    <!--a-->
+    <div class="section_service_card_mask">
+      <img src="assets/first-page-content-assets/service_section_2.svg" >
+    </div>
+    <!--b-->
+    <div class="section_service_card_text">
+      Customize Your <br> Products
+    </div>
+    <!--c-->
+    <div class="section_service_card_ellipse"></div>
+    <!--d-->
+    <div class="section_service_card_icon">
+      <img src="assets/first-page-content-assets/inventory_2.svg" >
+    </div>
+    <!---->
+  </div>
+  <!--4-->
+  <div id="card3" class="section_service_card">
+    <!--a-->
+    <div class="section_service_card_mask">
+      <img src="assets/first-page-content-assets/service_section_3.svg" >
+    </div>
+    <!--b-->
+    <div class="section_service_card_text">
+      Fast, reliable shipping <br> by ocean or air
+    </div>
+    <!--c-->
+    <div class="section_service_card_ellipse"></div>
+    <!--d-->
+    <div class="section_service_card_icon">
+      <img src="assets/first-page-content-assets/send.svg" >
+    </div>
+    <!---->
+  </div>
+  <!--5-->
+  <div id="card4" class="section_service_card">
+    <!--a-->
+    <div class="section_service_card_mask">
+      <img src="assets/first-page-content-assets/service_section_4.svg" >
+    </div>
+    <!--b-->
+    <div class="section_service_card_text">
+      Product monitoring <br> and inspection
+    </div>
+    <!--c-->
+    <div class="section_service_card_ellipse"></div>
+    <!--d-->
+    <div class="section_service_card_icon">
+      <img src="assets/first-page-content-assets/security.svg" >
+    </div>
+    <!---->
+  </div>
+  <!---->
+
+ </div>
+
+ <!-- ******   Section service section ended ******-->
+ 
+ <!-- ******   section country started ******-->
+
+ <div id="section_country">
+ <!--a-->
+
+ <div id="section_country_text">Suppliers by region</div>
+
+ <!--b-->
+ <div id="group985">
+
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/arabic_emirates.svg" alt=""></div>
+      <div class="group_985_name">Arabic Emirates</div>
+      <div class="group_985_subtitle">shopname.ae</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/australia.svg" alt=""></div>
+      <div class="group_985_name">Australia</div>
+      <div class="group_985_subtitle">shopname.ae</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/united_states.svg" alt=""></div>
+      <div class="group_985_name">United States</div>
+      <div class="group_985_subtitle">shopname.ae</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/Russia.svg" alt=""></div>
+      <div class="group_985_name">Russia</div>
+      <div class="group_985_subtitle">shopname.ru</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/italy.svg" alt=""></div>
+      <div class="group_985_name">Italy</div>
+      <div class="group_985_subtitle">shopname.it</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/denmark.svg" alt=""></div>
+      <div class="group_985_name">Denmark</div>
+      <div class="group_985_subtitle">denmark.com.dk</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/france.svg" alt=""></div>
+      <div class="group_985_name">France</div>
+      <div class="group_985_subtitle">shopname.com.fr</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/arabic_emirates.svg" alt=""></div>
+      <div class="group_985_name">Arabic Emirates</div>
+      <div class="group_985_subtitle">shopname.ae</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/china.svg" alt=""></div>
+      <div class="group_985_name">China</div>
+      <div class="group_985_subtitle">shopname.ae</div>
+    </div>
+    <div class="country_cards">
+      <div class="group_985_flag"><img src="assets/first-page-content-assets/Great Britian.svg" alt=""></div>
+      <div class="group_985_name">Great Britain</div>
+      <div class="group_985_subtitle">shopname.com.uk</div>
+    </div>
+
+ </div>
+
+ <!---->
+
+ </div>
+
+ <!-- ******   section country ended ******-->
+
+</main>
+
+<!-- **************  main ended ******************-->
+
+
+<!-- ****************** footer portion started **************** -->
+  <footer>
+  <!-- *** (A)News letter section ***-->
+    <div id="newsletter">
+      <!-- text and form-->
+      <div id="text_and_form">
+
+        <div id="text">
+          <div id="subscribe">Subscribe on our newsletter</div> 
+          <div id="notification_msg">Get daily news on upcoming offers from many suppliers all over the world</div>
+        </div>
+
+        <div id="form">
+            <div id="email_bar">
+              
+              <img id="email_img" src="assets/footer-section-assets/email.svg">
+              <input id="email_input" type="text" placeholder="Email">
+
+            </div>
+            <button id="subscribe_bar">
+              <div id="subscribe_text">Subscribe</div>
+            </button>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- *** (B)footer section *** -->
+
+    <div id="footer_section">
+
+      <!--1.media box-->
+      <div id="group552">
+
+        <!--logo starts here-->
+        <div id="footer_logo" class="logo">
+           <a href="#Home">
+           <img class="logo_symbol" src="assets/footer-section-assets/logo-symbol.svg">
+           <img class="logo_txt" src="assets/footer-section-assets/Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+        
+        <div id="media_text">
+          Best information about the company<br>
+          gies here but now lorem ipsum is
+        </div>
+
+        <div id="social_platforms"> 
+          <a href="#facebook"><img  class="social_platforms_icons"  src="assets/footer-section-assets/facebook.svg" ></a>
+          <a href="#twitter"><img   class="social_platforms_icons"  src="assets/footer-section-assets/twitter.svg"  ></a>
+          <a href="#linkeldin"><img class="social_platforms_icons"  src="assets/footer-section-assets/linkedin.svg" ></a>
+          <a href="#instagram"><img class="social_platforms_icons"  src="assets/footer-section-assets/instagram.svg"></a>
+          <a href="#youtube"><img   class="social_platforms_icons"  src="assets/footer-section-assets/youtube.svg"  ></a>   
+        </div>
+
+      </div>
+      <!-- 2.About column-->
+      <div  id="col1">
+        <a class="bold_links" href="#">About</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 3.Partnership column-->
+      <div  id="col2">
+        <a class="bold_links" href="#">Partnership</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 4.Information column-->
+      <div  id="col3">
+        <a class="bold_links" href="#">Information</a>
+        <div class="col">
+          <a href="#">Help Center</a>
+          <a href="#">Money Refund</a>
+          <a href="#">Shipping</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+      <!-- 5.For users column-->
+      <div  id="col4">
+        <a class="bold_links" href="#">For users</a>
+
+        <div class="col">
+          <a href="registration_system/login.html">login</a>
+          <a href="registration_system/SignUp.html">Register</a>
+          <a href="#">Settings</a>
+          <a href="#">My Orders</a>
+        </div>
+      </div>
+      <!-- 6.Get app column-->
+      <div id="get_app">
+        <a id="get_app_text" href="#app">Get app</a> 
+        <a href="#Appstore">  <img class="mobile_app_effect" src="assets/footer-section-assets/app_store.svg" ></a>
+        <a href="#Googleplay"><img class="mobile_app_effect" src="assets/footer-section-assets/google_play.svg"></a>
+      </div>
+      <!-- 7.copyright box-->
+      <div id="group998">
+              <div id="copyright_and_lang">
+                <!---->
+                <div id="copyright_text">
+                  <a href="#copyright">© 2023 Ecommerce.</a>
+                </div>
+                <!--language selection--> 
+                
+                  <div id="language_selection">
+                    
+                    <div id="flagimage_box">
+                      <img id="selected_flag" src="assets/footer-section-assets/english-flag-icon.svg"  >
+                      <p id="selected_lang">English</p>
+                      <img src="assets/footer-section-assets/expand_less.svg"  >
+                    </div>
+                    <!-- Dropdown options -->
+                    <ul id="language_menu">
+                     <li>
+                        <img src="assets/footer-section-assets/english-flag-icon.svg" > English
+                     </li>
+                     <li>
+                        <img src="assets/footer-section-assets/italy-flag-icon.svg" > Italian
+                     </li>
+                     <li>
+                        <img src="assets/footer-section-assets/france-flag-icon.svg" > French
+                     </li>
+                    </ul>                   
+                    <!---->
+                  </div>
+                
+                <!---->
+              </div>
+      </div>
+      <!---->
+
+    </div>
+
+
+  </footer>
+
+
+<!-- ****************** footer portion ended **************** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const selector = document.getElementById('country_selector');
+const selected = selector.querySelector('.selected');
+const menu = selector.querySelector('.menu');
+
+selected.onclick = () => {
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+};
+
+menu.querySelectorAll('li').forEach(item => {
+  item.onclick = () => {
+    const flag = item.querySelector('img').src;
+    const country = item.dataset.value;
+    selected.innerHTML = `
+      <img src="${flag}" class="flag1" alt="${country}">
+      <img src="assets/header_section_assets//expand_more.svg" class="icon1" alt="Dropdown">
+    `;
+    menu.style.display = 'none';
+  };
+});
+
+document.addEventListener('click', e => {
+  if (!selector.contains(e.target)) menu.style.display = 'none';
+});
+
+
+/*######### footer section started ###########*/
+  const flagBox = document.getElementById('flagimage_box');
+  const langMenu = document.getElementById('language_menu');
+  const selectedFlag = document.getElementById('selected_flag');
+  const selectedLang = document.getElementById('selected_lang');
+
+  // Toggle dropdown on flag box click
+  flagBox.onclick = () => {
+    langMenu.style.display = (langMenu.style.display === 'block') ? 'none' : 'block';
+  };
+
+  // Loop through each <li> and add click event
+  document.querySelectorAll('#language_menu li').forEach(item => {
+    item.onclick = () => {
+      const img = item.querySelector('img').src;        // get flag image src
+      const lang = item.textContent.trim();             // get language name text
+
+      selectedFlag.src = img;                           // update selected flag
+      selectedLang.textContent = lang;                  // update selected language
+      langMenu.style.display = 'none';                  // close dropdown
+    };
+  });
+
+  // Hide dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!document.getElementById('language_selection').contains(e.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+  
+
+
+
+
+
+
+
+
+
+
+/*page changing scripts */
+
+  document.getElementById("rectangle_300_btn_login").addEventListener("click", function () {
+    window.location.href = "registration_system/login.html";
+  });
+
+</script>
+
+  
+</body>
+</html>

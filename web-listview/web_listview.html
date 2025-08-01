@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>web list-view</title>
+  <link rel="stylesheet" href="web_listview.css">
+</head>
+<body>
+<!-- ******** Header portion satrted ******** -->
+  <header>
+
+   <!--(A)first (top header)-->
+    <div id="top_header">
+      <!-- (1)logo section-->
+      
+        <!--logo starts here-->
+        <div  id="main_logo" class="logo">
+          <a href="../index.html">
+            <img id="main_logo_symbol" class="logo_symbol" src="../assets/header_section_assets//logo-symbol.svg">
+            <img id="main_logo_txt" class="logo_txt" src="../assets/header_section_assets//Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+      
+      <!---->
+      <!-- (2)Search section-->
+      <div id="search_container"> 
+          
+          <input id="input_srch" type="text" placeholder="Search">
+        
+          <select id="category_selector">
+            <option>All category</option>
+          </select>
+        
+          <button id="search_btn">Search</button>
+          
+      </div>
+      <!---->
+      <!-- (3)actions section-->
+      <div id="actions_container">
+          <div id="profile">
+            <img src="../assets/header_section_assets//profile.svg">
+            <a href="#">Profile</a> 
+          </div>
+          <div id="message">
+            <img src="../assets/header_section_assets//message.svg">
+            <a href="#">Message</a>
+          </div>
+          <div id="orders">
+            <img src="../assets/header_section_assets//orders.svg">
+            <a href="#">Orders</a>  
+          </div>
+          <div id="My_cart">
+            <img src="../assets/header_section_assets//shopping_cart.svg">
+            <a href="../web-cart/webcart.html">My cart</a>
+          </div>  
+      </div>
+      <!---->
+    </div>
+
+<!-- (B) second (navbar)-->
+    <nav id="nav_bar">
+      <!-- (1) nav items section -->
+      <div id="navlist">
+        <div id ="menu_and_category">
+          <a id="menu-icon"><img src="../assets/header_section_assets//menu_icon.svg"></a>
+          <a href="#" id="navbar-item1">All category</a>
+        </div>
+        <a href="#" id="navbar-item2">Hot offers</a>
+        <a href="#" id="navbar-item3">Gift boxes</a>
+        <a href="#" id="navbar-item4">Projects</a>
+        <a href="#" id="navbar-item5">Menu item</a>
+        <select id="navbar_item_dropdown">
+          <option >Help</option>
+        </select>
+
+      </div>
+      
+      <!-- (2) language section -->
+      
+        <select name="languages" id="languages" class="inter-font">
+          <option value="English, USD" selected>English, USD</option>
+          <option value="Urdu">Urdu</option>
+          <option value="Bengali">Bengali</option>
+        </select>
+        
+      
+      <!-- (3) ship to section -->
+      <div id="ship_to">
+        <div  id="ship_text">Ship to</div>
+
+        <div id="country_selector">
+          <div class="selected">
+           <img src="../assets/header_section_assets//icon.svg" class="flag1" alt="Germany">
+           <img src="../assets/header_section_assets//expand_more.svg" class="icon1" alt="Dropdown">
+          </div>
+           <ul class="menu">
+            <li data-value="Germany"><img src="../assets/header_section_assets//icon.svg" class="flag1"> Germany</li>
+            <li data-value="France"><img src="../assets/header_section_assets//france-flag-icon.svg" class="flag1"> France</li>
+            <li data-value="Italy"><img src="../assets/header_section_assets//italy-flag-icon.svg" class="flag1"> Italy</li>
+           </ul>
+        </div>
+      </div>
+      <!---->
+
+    </nav>
+    
+      <!--Breadcrumb started-->
+
+    <div id="bread_crumb">
+      <div id="nav_bread_crumb">
+
+        <p>Home</p>
+        <img src="../assets/web_detail_assets/chevron_right.svg" >
+        <p>Clothings</p>
+        <img src="../assets/web_detail_assets/chevron_right.svg" >
+        <p>Men's wear</p>
+        <img src="../assets/web_detail_assets/chevron_right.svg" >
+        <p>Summer clothing</p>
+
+      </div>
+    </div>
+   </header>
+ <!-- ****************** Header portion Ended **************** -->
+  
+
+
+
+
+
+<main>
+  
+  <div id="container">
+    <!--sidebar started-->
+
+      <div id="sidebar">
+        <!--() category dropdown started-->
+        <div id="category_select_dropdown">
+          <!--a-->
+          <div class="select_category_open">
+            <span class="select_category_open_text">Category</span>
+            <img src="../assets/web_list_view_assets/expand_less.svg" id="dropdown_icon3">
+          </div>
+          <!--b-->
+          <ul class="category_list">
+            <li>Mobile accesory</li>
+            <li>Electronics</li>
+            <li>Smartphones</li>
+            <li>Modern tech</li>
+            <!-- Hidden initially -->
+             <div class="extra_features3 hidden">
+              <li >1</li>
+              <li >2</li>
+              <li >3</li>
+            </div>
+            <li><p class="see_all3">See all</p></li>
+          </ul>
+          <!---->
+        </div>
+        <!-- category dropdown ended -->
+
+        <!--() Brands dropdown started-->
+        <div id="Brands_select_dropdown">
+          <!--a-->
+          <div class="select_Brands_open">
+            <span class="select_Brands_open_text">Brands</span>
+            <img src="../assets/web_list_view_assets/expand_less.svg" id="dropdown_icon1">
+          </div>
+          <!--b-->
+          <ul class="Brands_list">
+            <li><input type="checkbox">Samsung</li>
+            <li><input type="checkbox">Apple</li>
+            <li><input type="checkbox">Huawei</li>
+            <li><input type="checkbox">Pocco</li>
+            <li><input type="checkbox">Lenovo</li>
+            <!-- Hidden initially -->
+            <div class="extra_features1 hidden">
+              <li><input type="checkbox">OPPO</li>
+              <li><input type="checkbox">Realme</li>
+              <li><input type="checkbox">Xiaomi</li>
+            </div>
+            <li><p class="see_all1">See all</p></li>
+          </ul>
+          <!---->
+        </div>
+        <!-- Brands dropdown ended-->
+        
+        <!--() Features dropdown started-->
+        <div id="features_select_dropdown">
+          <!--a-->
+          <div class="select_features_open">
+            <span class="select_features_open_text">Features</span>
+            <img src="../assets/web_list_view_assets/expand_less.svg" id="dropdown_icon2">
+          </div>
+          <!--b-->
+          <ul class="features_list">
+            <li><input type="checkbox">Metallic</li>
+            <li><input type="checkbox">Plastic cover</li>
+            <li><input type="checkbox">8GB Ram</li>
+            <li><input type="checkbox">Super power</li>
+            <li><input type="checkbox">Large Memory</li>
+            <!-- Hidden initially -->
+            <div class="extra_features2 hidden">
+              <li><input type="checkbox"> Fast Charging</li>
+              <li><input type="checkbox"> Water Resistant</li>
+              <li><input type="checkbox"> Long Battery Life</li>
+            </div>
+            <li><p class="see_all2">See all</p></li>
+          </ul>
+          <!---->
+        </div>
+        <!-- Features dropdown ended -->
+        <!--********  price sliding mechanism started  ******* -->
+        <div id="price_sliding_mechanism_container">
+          <!-- () up down for slider started-->
+          <div class="price_range_open">
+            <span class="price_range_open_text">Price</span>
+            <img src="../assets/web_list_view_assets/expand_less.svg" id="price_range_dropdown_icon">
+          </div>
+        
+          <!-- () up down for slider ended-->
+        
+          <!--() price range slider started-->
+        
+          <div class="price_range_slider">
+            <!--a-->
+            <div class="price_range_slider_range_selector">
+            
+              <div class="slider">
+                <div class="progress"></div> 
+              </div>
+              <div class="range_input">
+                <input class="range_input_min r_input" type="range" min="10" value="20000" max="49999">
+                <input class="range_input_max r_input" type="range" min="50000" value="60000" max="99999">
+              </div>
+            
+            </div>
+            <!--b-->
+            <div class="price_range_slider_box">
+              <!--b1-->
+              <div class="price_range_slider_min_box">
+                <label class="price_range_slider_min_box_title">Min</label>
+                <input class="price_range_slider_min_box_input" type="number" placeholder="0">
+              </div>
+              <!--b2-->
+              <div class="price_range_slider_max_box">
+                <label class="price_range_slider_max_box_title">Max</label>
+                <input class="price_range_slider_max_box_input" type="number" placeholder="99999">
+              </div>
+              <!---->
+            </div>
+            <!--c-->
+            <button class="price_range_slider_button">
+              Apply
+            </button>
+            <!---->
+          </div>
+        
+          <!-- price range slider ended -->
+        </div>   
+
+        <!--********  price sliding mechanism ended  *******/ -->
+        <!--() condition dropdown started-->
+        <div id="condition_select_dropdown">
+          <!--a-->
+          <div class="select_condition_open">
+            <span class="select_condition_open_text">Condition</span>
+            <img src="../assets/web_list_view_assets/expand_less.svg" class="dropdown_icon">
+          </div>
+          <!--b-->
+          <ul class="condition_list">
+           <li>
+            <input type="radio" name="condition" checked>
+            Any
+           </li>
+           <li>
+            <input type="radio" name="condition" >
+            Refurbished
+           </li>
+           <li>
+            <input type="radio" name="condition" >
+            Brand new
+           </li>
+           <li>
+            <input type="radio" name="condition" >
+            Old items
+           </li>
+          </ul>
+          <!---->
+        </div>
+        <!-- condition dropdown ended -->
+
+        <!--() Rating dropdown started-->
+        <div id="rating_select_dropdown">
+          <!--a-->
+          <div class="select_rating_open">
+            <span class="select_rating_open_text">Ratings</span>
+            <img src="../assets/web_list_view_assets/expand_less.svg" id="dropdown_toggle_icon">
+          </div>
+          <!--b-->
+          <ul class="rating_list">
+            <!---->
+            <li><input class="checkboxes" type="checkbox"><label>
+              <div id="misc_rating1">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+              </div>
+            </label></li>
+            <!---->
+            <li><input class="checkboxes" type="checkbox"><label>
+              <div id="misc_rating2">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/no_color_star.svg">
+              </div>
+            </label></li>
+            <!---->
+            <li><input class="checkboxes" type="checkbox"><label>
+              <div id="misc_rating3">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/no_color_star.svg">
+                <img src="../assets/web_list_view_assets/no_color_star.svg">
+              </div>
+            </label></li>
+            <!---->
+            <li><input class="checkboxes" type="checkbox"><label>
+              <div id="misc_rating4">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/orange_star.svg">
+                <img src="../assets/web_list_view_assets/no_color_star.svg">
+                <img src="../assets/web_list_view_assets/no_color_star.svg">
+                <img src="../assets/web_list_view_assets/no_color_star.svg">
+              </div>
+            </label></li>
+            <!---->
+          </ul>
+          <!---->
+        </div>
+        <!-- Rating dropdown ended -->
+
+
+
+
+
+      </div>
+
+    <!--sidebar ended-->
+
+    <div id="content_and_contenttop_conatiner">
+      <!--content top started-->
+      <div id="content_top">
+        <P id="content_top_txt">
+          12,911 items in <span id="content_top_txt_category">Mobile accesory</span>
+        </P>
+      
+        <form id="verified_form">
+          <input type="checkbox"     id="verified_only_box">
+          <label for="verified_only_box" id="verified_only_txt" >Verified only</label>
+        </form>
+      
+        <select id="featured_select_box">
+          <option>Featured</option>
+        </select>
+      
+        <div id="content_top_button_group">
+          <button id="ct_btn1" class="content_top_button_group_btn" onclick="active_view()"></button>
+          <button id="ct_btn2" class="content_top_button_group_btn btn_group_selected_btn" onclick="active_view()"></button>
+        </div>
+      
+      </div>
+      <!--content top ended-->
+
+      <!--content started-->
+      <div id="content">
+
+        <div class="product_card">
+          <!--1-->
+          <div class="img_container">
+            <img src="../assets/web_list_view_assets/mobile.svg">
+          </div>
+          <!--2-->
+          <p class="product_card_title">Canon Cmera EOS 2000, Black 10x zoom</p>
+          <!--3-->
+          <div class="product_card_price">
+            <P class="product_card_price_1">$998.00</P>
+            <p class="product_card_price_2">$1128.00</p>
+          </div>
+          <!--4-->
+          <div class="group989">
+            <div class="rating_misc">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/gray_star.svg" >
+            </div>
+
+            <p class="rating_no">7.5</p>
+
+            <div class="dot"></div>
+
+            <p class="order_no">154 orders</p>
+
+            <div class="dot"></div>
+
+            <p class="shipping_cost">Free Shipping</p>
+          </div>
+          <!--5-->
+          <div class="description">
+            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              <br>tempor incididunt ut labore et dolore magna aliqua
+            </p>
+            <a href="../web-detail/web_detail.html" class="detail_link">View details</a>
+          </div>
+          <!--6-->
+            <button class="heart_btn">
+              <img src="../assets/web_list_view_assets/favorite_icon.svg">
+            </button>
+          <!---->
+        </div>
+        <!--######################################-->
+        <div class="product_card">
+          <!--1-->
+          <div class="img_container">
+            <img src="../assets/web_list_view_assets/mobile2.svg">
+          </div>
+          <!--2-->
+          <p class="product_card_title">GoPro HERO6 4K Action Camera - Black</p>
+          <!--3-->
+          <div class="product_card_price">
+            <P class="product_card_price_1">$998.00</P>
+
+          </div>
+          <!--4-->
+          <div class="group989">
+            <div class="rating_misc">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/gray_star.svg" >
+            </div>
+
+            <p class="rating_no">7.5</p>
+
+            <div class="dot"></div>
+
+            <p class="order_no">154 orders</p>
+
+            <div class="dot"></div>
+
+            <p class="shipping_cost">Free Shipping</p>
+          </div>
+          <!--5-->
+          <div class="description">
+            <p class="description_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+            <a href="../web-detail/web_detail.html" class="detail_link">View details</a>
+          </div>
+          <!--6-->
+            <button class="heart_btn">
+              <img src="../assets/web_list_view_assets/favorite_icon.svg">
+            </button>
+          <!---->
+        </div>
+        <!--######################################-->
+        <div class="product_card">
+          <!--1-->
+          <div class="img_container">
+            <img src="../assets/web_list_view_assets/mobile3.svg">
+          </div>
+          <!--2-->
+          <p class="product_card_title">GoPro HERO6 4K Action Camera - Black</p>
+          <!--3-->
+          <div class="product_card_price">
+            <P class="product_card_price_1">$998.00</P>
+          </div>
+          <!--4-->
+          <div class="group989">
+            <div class="rating_misc">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/gray_star.svg" >
+            </div>
+
+            <p class="rating_no">7.5</p>
+
+            <div class="dot"></div>
+
+            <p class="order_no">154 orders</p>
+
+            <div class="dot"></div>
+
+            <p class="shipping_cost">Free Shipping</p>
+          </div>
+          <!--5-->
+          <div class="description">
+            <p class="description_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+            <a href="../web-detail/web_detail.html" class="detail_link">View details</a>
+          </div>
+          <!--6-->
+            <button class="heart_btn">
+              <img src="../assets/web_list_view_assets/favorite_icon.svg">
+            </button>
+          <!---->
+        </div>
+        <!--######################################-->
+        <div class="product_card">
+          <!--1-->
+          <div class="img_container">
+            <img src="../assets/web_list_view_assets/laptop.svg">
+          </div>
+          <!--2-->
+          <p class="product_card_title">GoPro HERO6 4K Action Camera - Black</p>
+          <!--3-->
+          <div class="product_card_price">
+            <P class="product_card_price_1">$998.00</P>
+          </div>
+          <!--4-->
+          <div class="group989">
+            <div class="rating_misc">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/gray_star.svg" >
+            </div>
+
+            <p class="rating_no">7.5</p>
+
+            <div class="dot"></div>
+
+            <p class="order_no">154 orders</p>
+
+            <div class="dot"></div>
+
+            <p class="shipping_cost">Free Shipping</p>
+          </div>
+          <!--5-->
+          <div class="description">
+            <p class="description_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+            <a href="../web-detail/web_detail.html" class="detail_link">View details</a>
+          </div>
+          <!--6-->
+            <button class="heart_btn">
+              <img src="../assets/web_list_view_assets/favorite_icon.svg">
+            </button>
+          <!---->
+        </div>
+        <!--######################################-->
+        <div class="product_card">
+          <!--1-->
+          <div class="img_container">
+            <img src="../assets/web_list_view_assets/smart_watch.svg">
+          </div>
+          <!--2-->
+          <p class="product_card_title">GoPro HERO6 4K Action Camera - Black</p>
+          <!--3-->
+          <div class="product_card_price">
+            <P class="product_card_price_1">$998.00</P>
+            <p class="product_card_price_2">$1128.00</p>
+          </div>
+          <!--4-->
+          <div class="group989">
+            <div class="rating_misc">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/gray_star.svg" >
+            </div>
+
+            <p class="rating_no">7.5</p>
+
+            <div class="dot"></div>
+
+            <p class="order_no">154 orders</p>
+
+            <div class="dot"></div>
+
+            <p class="shipping_cost">Free Shipping</p>
+          </div>
+          <!--5-->
+          <div class="description">
+            <p class="description_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+            <a href="../web-detail/web_detail.html" class="detail_link">View details</a>
+          </div>
+          <!--6-->
+            <button class="heart_btn">
+              <img src="../assets/web_list_view_assets/favorite_icon.svg">
+            </button>
+          <!---->
+        </div>
+        <!--######################################-->
+        <div class="product_card">
+          <!--1-->
+          <div class="img_container">
+            <img src="../assets/web_list_view_assets/headphones.svg">
+          </div>
+          <!--2-->
+          <p class="product_card_title">GoPro HERO6 4K Action Camera - Black</p>
+          <!--3-->
+          <div class="product_card_price">
+            <P class="product_card_price_1">$998.00</P>
+          </div>
+          <!--4-->
+          <div class="group989">
+            <div class="rating_misc">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/rating_star.svg">
+              <img src="../assets/web_list_view_assets/gray_star.svg" >
+            </div>
+
+            <p class="rating_no">7.5</p>
+
+            <div class="dot"></div>
+
+            <p class="order_no">154 orders</p>
+
+            <div class="dot"></div>
+
+            <p class="shipping_cost">Free Shipping</p>
+          </div>
+          <!--5-->
+          <div class="description">
+            <p class="description_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+            <a href="../web-detail/web_detail.html" class="detail_link">View details</a>
+          </div>
+          <!--6-->
+            <button class="heart_btn">
+              <img src="../assets/web_list_view_assets/favorite_icon.svg">
+            </button>
+          <!---->
+        </div>
+        <!--######################################-->
+
+      </div>
+      <!--content ended-->
+      
+    </div>
+    <!--content and content top container ended-->
+
+  </div>
+  <!--container ended-->
+
+  <!--selection container started-->
+  <div id="selection_container">
+    <!--a-->
+    <div id="custom-select-wrapper">
+      <p>Show</p>
+      <select id="custom-select">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option selected>10</option>
+      </select>
+    </div>
+    <!--b-->
+    <div class="pagination">
+     <button id="prev"><img src="../assets/web_list_view_assets/chevron-left.svg" ></button>
+     <ul>
+      <li class="link active" onclick="active_link()">1</li>
+      <li class="link "       onclick="active_link()">2</li>
+      <li class="link "       onclick="active_link()">3</li>
+     </ul>
+     <button id="next"><img src="../assets/web_list_view_assets/chevron-right.svg" ></button>
+    </div>
+    <!---->
+  </div>
+
+</main>
+
+  <!-- ****************** footer portion started **************** -->
+  <footer>
+  <!-- *** (A)News letter section ***-->
+    <div id="newsletter">
+      <!-- text and form-->
+      <div id="text_and_form">
+
+        <div id="text">
+          <div id="subscribe">Subscribe on our newsletter</div> 
+          <div id="notification_msg">Get daily news on upcoming offers from many suppliers all over the world</div>
+        </div>
+
+        <div id="form">
+            <div id="email_bar">
+              
+              <img id="email_img" src="../assets/footer-section-assets/email.svg">
+              <input id="email_input" type="text" placeholder="Email">
+
+            </div>
+            <button id="subscribe_bar">
+              <div id="subscribe_text">Subscribe</div>
+            </button>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- *** (B)footer section *** -->
+
+    <div id="footer_section">
+
+      <!--1.media box-->
+      <div id="group552">
+
+        <!--logo starts here-->
+        <div id="footer_logo" class="logo">
+           <a href="#Home">
+           <img class="logo_symbol" src="../assets/footer-section-assets/logo-symbol.svg">
+           <img class="logo_txt" src="../assets/footer-section-assets/Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+        
+        <div id="media_text">
+          Best information about the company<br>
+          gies here but now lorem ipsum is
+        </div>
+
+        <div id="social_platforms"> 
+          <a href="#facebook"><img  class="social_platforms_icons"  src="../assets/footer-section-assets/facebook.svg" ></a>
+          <a href="#twitter"><img   class="social_platforms_icons"  src="../assets/footer-section-assets/twitter.svg"  ></a>
+          <a href="#linkeldin"><img class="social_platforms_icons"  src="../assets/footer-section-assets/linkedin.svg" ></a>
+          <a href="#instagram"><img class="social_platforms_icons"  src="../assets/footer-section-assets/instagram.svg"></a>
+          <a href="#youtube"><img   class="social_platforms_icons"  src="../assets/footer-section-assets/youtube.svg"  ></a>   
+        </div>
+
+      </div>
+      <!-- 2.About column-->
+      <div  id="col1">
+        <a class="bold_links" href="#">About</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 3.Partnership column-->
+      <div  id="col2">
+        <a class="bold_links" href="#">Partnership</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 4.Information column-->
+      <div  id="col3">
+        <a class="bold_links" href="#">Information</a>
+        <div class="col">
+          <a href="#">Help Center</a>
+          <a href="#">Money Refund</a>
+          <a href="#">Shipping</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+      <!-- 5.For users column-->
+      <div  id="col4">
+        <a class="bold_links" href="#">For users</a>
+
+        <div class="col">
+          <a href="registration_system/login.html">login</a>
+          <a href="registration_system/SignUp.html">Register</a>
+          <a href="#">Settings</a>
+          <a href="#">My Orders</a>
+        </div>
+      </div>
+      <!-- 6.Get app column-->
+      <div id="get_app">
+        <a id="get_app_text" href="#app">Get app</a> 
+        <a href="#Appstore">  <img class="mobile_app_effect" src="../assets/footer-section-assets/app_store.svg" ></a>
+        <a href="#Googleplay"><img class="mobile_app_effect" src="../assets/footer-section-assets/google_play.svg"></a>
+      </div>
+      <!-- 7.copyright box-->
+      <div id="group998">
+              <div id="copyright_and_lang">
+                <!---->
+                <div id="copyright_text">
+                  <a href="#copyright">© 2023 Ecommerce.</a>
+                </div>
+                <!--language selection--> 
+                
+                  <div id="language_selection">
+                    
+                    <div id="flagimage_box">
+                      <img id="selected_flag" src="../assets/footer-section-assets/english-flag-icon.svg"  >
+                      <p id="selected_lang">English</p>
+                      <img src="../assets/footer-section-assets/expand_less.svg"  >
+                    </div>
+                    <!-- Dropdown options -->
+                    <ul id="language_menu">
+                     <li>
+                        <img src="../assets/footer-section-assets/english-flag-icon.svg" > English
+                     </li>
+                     <li>
+                        <img src="../assets/footer-section-assets/italy-flag-icon.svg" > Italian
+                     </li>
+                     <li>
+                        <img src="../assets/footer-section-assets/france-flag-icon.svg" > French
+                     </li>
+                    </ul>                   
+                    <!---->
+                  </div>
+                
+                <!---->
+              </div>
+      </div>
+      <!---->
+
+    </div>
+
+
+  </footer>
+
+
+<!-- ****************** footer portion ended **************** -->
+    
+  
+
+</main>
+
+<script>
+/* (A) pagination working */
+let link= document.getElementsByClassName("link");
+
+/* function to remove class from element and give that class to particular element */
+function active_link(){
+  /* removes class */
+  for( l of link){
+    l.classList.remove("active");
+  }
+  /* add class */
+  event.target.classList.add("active");
+}
+/* (B) top content views */
+let btn_views= document.getElementsByClassName("content_top_button_group_btn");
+
+/* function to remove class from element and give that class to particular element */
+function active_view(){
+  /* removes class */
+  for( l of btn_views){
+    l.classList.remove("btn_group_selected_btn");
+  }
+  /* add class */
+  event.target.classList.add("btn_group_selected_btn");
+}
+/* (C) rating dropdown */
+function toggleRatingList() {
+    const icon = document.getElementById("dropdown_toggle_icon");
+    const list = document.querySelector(".rating_list");
+    list.classList.toggle("hidden");
+    icon.classList.toggle("rotated");
+  }
+document.getElementById("dropdown_toggle_icon").addEventListener("click", toggleRatingList);
+/* (D) condition Dropdown */
+function toggleConditionList() {
+    const icon = document.querySelector(".dropdown_icon");
+    const list = document.querySelector(".condition_list");
+    list.classList.toggle("hidden");
+    icon.classList.toggle("rotated");
+  }
+document.querySelector(".dropdown_icon").addEventListener("click", toggleConditionList);
+/* (E) Brands dropdown */
+function toggleBrandsList() {
+  const icon = document.querySelector("#dropdown_icon1");
+  const list = document.querySelector(".Brands_list");
+  list.classList.toggle("hidden");
+  icon.classList.toggle("rotated");
+}
+function toggleSeeAll() {
+  const extraItems = document.querySelector(".extra_features1");
+  const seeAllButton = document.querySelector(".see_all1");
+  const isHidden = extraItems.classList.contains("hidden");
+  if (isHidden) {
+    extraItems.classList.remove("hidden");
+    seeAllButton.textContent = "See less";
+  } else {
+    extraItems.classList.add("hidden");
+    seeAllButton.textContent = "See all";
+  }
+}
+document.querySelector("#dropdown_icon1").addEventListener("click", toggleBrandsList);
+document.querySelector(".see_all1").addEventListener("click", toggleSeeAll);
+/* (F) Features dropdown */
+function toggleFeaturesList() {
+  const icon = document.querySelector("#dropdown_icon2");
+  const list = document.querySelector(".features_list");
+  list.classList.toggle("hidden");
+  icon.classList.toggle("rotated");
+}
+function toggleSeeAll2() {
+  const extraItems = document.querySelector(".extra_features2");
+  const seeAllButton = document.querySelector(".see_all2");
+  const isHidden = extraItems.classList.contains("hidden");
+  if (isHidden) {
+    extraItems.classList.remove("hidden");
+    seeAllButton.textContent = "See less";
+  } else {
+    extraItems.classList.add("hidden");
+    seeAllButton.textContent = "See all";
+  }
+}
+document.querySelector("#dropdown_icon2").addEventListener("click", toggleFeaturesList);
+document.querySelector(".see_all2").addEventListener("click", toggleSeeAll2);
+/* (G) Category dropdown */
+function toggleCategoryList() {
+  const icon = document.querySelector("#dropdown_icon3");
+  const list = document.querySelector(".category_list");
+  list.classList.toggle("hidden");
+  icon.classList.toggle("rotated");
+}
+function toggleSeeAll3() {
+  const extraItems = document.querySelector(".extra_features3");
+  const seeAllButton = document.querySelector(".see_all3");
+  const isHidden = extraItems.classList.contains("hidden");
+  if (isHidden) {
+    extraItems.classList.remove("hidden");
+    seeAllButton.textContent = "See less";
+  } else {
+    extraItems.classList.add("hidden");
+    seeAllButton.textContent = "See all";
+  }
+}
+document.querySelector("#dropdown_icon3").addEventListener("click", toggleCategoryList);
+document.querySelector(".see_all3").addEventListener("click", toggleSeeAll3);
+
+/******** (H) price sliding mechanism started  *******/
+// ✅ Function to hide/show the price range slider
+function toggleSliderVisibility() {
+  const slider = document.querySelector('.price_range_slider'); // Use querySelector for single element
+  slider.classList.toggle('price_range_slider_hiding');
+}
+
+// ✅ Function to rotate the dropdown icon
+function toggleIconRotation() {
+  const icon = document.getElementById('price_range_dropdown_icon');
+  icon.classList.toggle('price_range_dropdown_icon_rotated');
+}
+
+// ✅ Attach both functions to the same click event
+document.querySelector('.price_range_open').addEventListener('click', function () {
+  toggleSliderVisibility();
+  toggleIconRotation();
+});
+/* ---------------------------------------------------------------- */
+// Select elements
+const minSlider = document.querySelector('.range_input_min');
+const maxSlider = document.querySelector('.range_input_max');
+const minBox = document.querySelector('.price_range_slider_min_box_input');
+const maxBox = document.querySelector('.price_range_slider_max_box_input');
+const progress = document.querySelector('.progress');
+
+// Min and max possible values
+const minValue = parseInt(minSlider.min);
+const maxValue = parseInt(maxSlider.max);
+
+// Set initial values
+minBox.value = minSlider.value;
+maxBox.value = maxSlider.value;
+
+// Function to update progress bar
+function updateProgress() {
+  const minVal = parseInt(minSlider.value);
+  const maxVal = parseInt(maxSlider.value);
+
+  const minPercent = ((minVal - minValue) / (maxValue - minValue)) * 100;
+  const maxPercent = ((maxVal - minValue) / (maxValue - minValue)) * 100;
+
+  progress.style.width = (maxPercent - minPercent) + '%';
+  progress.style.marginLeft = minPercent + '%';
+}
+
+// Update min input when min slider changes
+function updateMinInput() {
+  minBox.value = minSlider.value;
+  updateProgress();
+}
+
+// Update max input when max slider changes
+function updateMaxInput() {
+  maxBox.value = maxSlider.value;
+  updateProgress();
+}
+
+// Update min slider when min box is changed
+function updateMinSlider() {
+  let value = parseInt(this.value);
+
+  // Clamp value within range
+  if (isNaN(value) || value < minValue) value = minValue;
+  if (value > maxValue) value = maxValue;
+  if (value >= parseInt(maxSlider.value)) value = parseInt(maxSlider.value) - 1; // Ensure min < max
+
+  minSlider.value = value;
+  minBox.value = value; // Reset to clamped value
+  updateProgress();
+}
+
+// Update max slider when max box is changed
+function updateMaxSlider() {
+  let value = parseInt(this.value);
+
+  // Clamp value within range
+  if (isNaN(value) || value > maxValue) value = maxValue;
+  if (value < minValue) value = minValue;
+  if (value <= parseInt(minSlider.value)) value = parseInt(minSlider.value) + 1; // Ensure max > min
+
+  maxSlider.value = value;
+  maxBox.value = value; // Reset to clamped value
+  updateProgress();
+}
+
+// Event listeners
+minSlider.addEventListener('input', updateMinInput);
+maxSlider.addEventListener('input', updateMaxInput);
+
+minBox.addEventListener('change', updateMinSlider); // 'change' fires after blur or Enter
+minBox.addEventListener('blur', updateMinSlider);   // Optional: immediate update on blur
+
+maxBox.addEventListener('change', updateMaxSlider);
+maxBox.addEventListener('blur', updateMaxSlider);
+
+// Initial progress
+updateProgress();
+
+/********  price sliding mechanism ended  *******/
+
+
+
+
+
+const selector = document.getElementById('country_selector');
+const selected = selector.querySelector('.selected');
+const menu = selector.querySelector('.menu');
+
+selected.onclick = () => {
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+};
+
+menu.querySelectorAll('li').forEach(item => {
+  item.onclick = () => {
+    const flag = item.querySelector('img').src;
+    const country = item.dataset.value;
+    selected.innerHTML = `
+      <img src="${flag}" class="flag1" alt="${country}">
+      <img src="../assets/header_section_assets//expand_more.svg" class="icon1" alt="Dropdown">
+    `;
+    menu.style.display = 'none';
+  };
+});
+
+document.addEventListener('click', e => {
+  if (!selector.contains(e.target)) menu.style.display = 'none';
+});
+
+
+/*######### footer section started ###########*/
+  const flagBox = document.getElementById('flagimage_box');
+  const langMenu = document.getElementById('language_menu');
+  const selectedFlag = document.getElementById('selected_flag');
+  const selectedLang = document.getElementById('selected_lang');
+
+  // Toggle dropdown on flag box click
+  flagBox.onclick = () => {
+    langMenu.style.display = (langMenu.style.display === 'block') ? 'none' : 'block';
+  };
+
+  // Loop through each <li> and add click event
+  document.querySelectorAll('#language_menu li').forEach(item => {
+    item.onclick = () => {
+      const img = item.querySelector('img').src;        // get flag image src
+      const lang = item.textContent.trim();             // get language name text
+
+      selectedFlag.src = img;                           // update selected flag
+      selectedLang.textContent = lang;                  // update selected language
+      langMenu.style.display = 'none';                  // close dropdown
+    };
+  });
+
+  // Hide dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!document.getElementById('language_selection').contains(e.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+  
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
