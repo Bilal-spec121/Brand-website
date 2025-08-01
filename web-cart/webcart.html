@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>web cart</title>
+    <link rel="stylesheet" href="webcart.css" />
+  </head>
+  <body>
+    <!-- ******** Header portion satrted ******** -->
+  <header>
+
+   <!--(A)first (top header)-->
+    <div id="top_header">
+      <!-- (1)logo section-->
+      
+        <!--logo starts here-->
+        <div  id="main_logo" class="logo">
+          <a href="../index.html">
+            <img id="main_logo_symbol" class="logo_symbol" src="../assets/header_section_assets/logo-symbol.svg">
+            <img id="main_logo_txt" class="logo_txt" src="../assets/header_section_assets/Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+      
+      <!---->
+      
+      <!-- (3)actions section-->
+      <div id="actions_container">
+          <div id="profile">
+            <img src="../assets/header_section_assets/profile.svg">
+            <a href="#">Profile</a> 
+          </div>
+          <div id="message">
+            <img src="../assets/header_section_assets/message.svg">
+            <a href="#">Message</a>
+          </div>
+          <div id="orders">
+            <img src="../assets/header_section_assets/orders.svg">
+            <a href="#">Orders</a>  
+          </div>
+          <div id="My_cart">
+            <img src="../assets/header_section_assets/shopping_cart.svg">
+            <a href="#">My cart</a>
+          </div>  
+      </div>
+      <!---->
+    </div>
+     
+   </header>
+ 
+    <main>
+      <!--(A) title started-->
+      <div id="my_cart_title">
+        My cart (<p>3</p>)
+      </div>
+      <!-- title ended-->
+
+      <!--(B) and (C,D) started-->
+      <div id="B_and_C_D_container">
+
+        <!--(B) cart started-->
+
+        <div id="web_cart">
+          <!--item-cart1-->
+          <div class="item_cart">
+            <div class="img_group"><img src="../assets/web_cart_assets/shirt.svg"></div>
+            <p class="text_name">T-shirts with multiple colors for men and lady</p>
+            <p class="text_description">Size: medium, Color: blue, Material:plastic<br>Seller: Artel Market</p>
+            <button class="remove_btn">Remove</button>
+            <button class="save_later_btn">Save for later</button>
+            <div class="item_cart_price">$78.99</div>
+            <div class="custom-select-wrapper">
+              <p>Qty:</p>
+              <select class="custom-select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option selected>9</option>
+              </select>
+            </div>
+          </div>
+          <!--item-cart2-->
+          <div class="item_cart">
+            <div class="img_group"><img src="../assets/web_cart_assets/bag.svg"></div>
+            <p class="text_name">T-shirts with multiple colors for men and lady</p>
+            <p class="text_description">Size: medium, Color: blue, Material:plastic<br>Seller: Best factory LLC</p>
+            <button class="remove_btn">Remove</button>
+            <button class="save_later_btn">Save for later</button>
+            <div class="item_cart_price">$39.00</div>
+            <div class="custom-select-wrapper">
+              <p>Qty:</p>
+              <select class="custom-select">
+                <option>1</option>
+                <option>2</option>
+                <option selected>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option >9</option>
+              </select>
+            </div>
+          </div>
+          <!--item-cart3-->
+          <div class="item_cart">
+            <div class="img_group"><img src="../assets/web_cart_assets/lamp.svg"></div>
+            <p class="text_name">T-shirts with multiple colors for men and lady</p>
+            <p class="text_description">Size: medium, Color: blue, Material:plastic<br>Seller: Artel Market</p>
+            <button class="remove_btn">Remove</button>
+            <button class="save_later_btn">Save for later</button>
+            <div class="item_cart_price">$170.50</div>
+            <div class="custom-select-wrapper">
+              <p>Qty:</p>
+              <select class="custom-select">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+              </select>
+            </div>
+          </div>
+          <!--Back to shop button-->
+          <button id="back_btn">
+            <img src="../assets/web_cart_assets/arrow_back.svg" >
+            Back to shop
+          </button>
+          <!-- remove button -->
+           <button id="remove_btn">Remove all</button>
+          <!---->
+        </div>
+
+        <!-- cart ended-->
+
+        <!--(C) and (D) started-->
+        <div id="C_and_D_container">
+          <!--(C) coupon Block started-->
+
+          <div id="block_coupon">
+            <p>Have a coupon?</p>
+            <div id="coupon_entry_box">
+              <input id="Add_coupon" type="text" placeholder="Add coupon">
+              <button>Apply</button>
+            </div>
+          </div>
+
+          <!-- coupon Block ended-->
+
+          <!--(D) Asida summary started-->
+
+          <div id="asida_summary">
+
+            <div id="summary_row1">
+              <p id="row1_text">Subtotal:</p>
+              <p id="row1_digit">$1403.97</p>
+            </div>
+
+            <div id="summary_row2">
+              <p id="row2_text">Discount:</p>
+              <p id="row2_digit">-$60.00</p>
+            </div>
+
+            <div id="summary_row3">
+              <p id="row3_text">Tax:</p>
+              <p id="row3_digit">+ $14.00</p>
+            </div>
+
+            <div id="separator"></div>
+
+            <div id="total_row">
+              <p id="total_row_text">Total:</p>
+              <p id="total_row_digit">$1357.97</p>
+            </div>
+
+            <button id="summary_checkout_btn">Checkout</button>
+
+            <div id="payment_method_container">
+              <div class="payment_method_div">
+                <img src="../assets/web_cart_assets/payment1.svg" >
+              </div>
+              <div class="payment_method_div">
+                <img src="../assets/web_cart_assets/payment2.svg" >
+              </div>
+              <div class="payment_method_div">
+                <img src="../assets/web_cart_assets/payment3.svg" >
+              </div>
+              <div class="payment_method_div">
+                <img src="../assets/web_cart_assets/payment4.svg" >
+              </div>
+              <div class="payment_method_div">
+                <img src="../assets/web_cart_assets/payment5.svg" >
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Asida summary ended-->
+        </div>
+        <!--(C) and (D) ended-->
+      </div>
+      <!--(B) and (C,D) ended-->
+
+      <!--(E)   SCF conatiner started-->
+
+      <div id="SCF_container">
+
+        <div class="SCF_container_items">
+          <img class="SCF_container_items_icon" src="../assets/web_cart_assets/icon1.svg">
+          <div class="SCF_container_items_text">
+            <p class="SCF_container_items_text_txt1">Secure payment</p>
+            <p class="SCF_container_items_text_txt2">Have you ever finally just</p>
+          </div>
+        </div>
+
+        <div class="SCF_container_items">
+          <img class="SCF_container_items_icon" src="../assets/web_cart_assets/icon2.svg">
+          <div class="SCF_container_items_text">
+            <p class="SCF_container_items_text_txt1">Customer support</p>
+            <p class="SCF_container_items_text_txt2">Have you ever finally just</p>
+          </div>
+        </div>
+
+        <div class="SCF_container_items">
+          <img class="SCF_container_items_icon" src="../assets/web_cart_assets/icon3.svg">
+          <div class="SCF_container_items_text">
+            <p class="SCF_container_items_text_txt1">Free delivery</p>
+            <p class="SCF_container_items_text_txt2">Have you ever finally just</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SCF container ended-->
+
+      <!--(F) saved for later section started-->
+      <div id="saved_for_later_section">
+
+        <p id="saved_for_later_heading">Saved for later</p>
+
+        <div class="saved_for_later_item">
+          <img src="../assets/web_cart_assets/mobile_phone.svg" >
+          <p class="saved_for_later_item_price">$99.50</p>
+          <p class="saved_for_later_item_title">GoPro HERO6 4K Action<br>Camera - Black</p>
+          <button class="move_to_cart_btn">
+            <img src="../assets/web_cart_assets/shopping_cart.svg">
+            <p>Move to cart</p>
+          </button>
+        </div>
+
+        <div class="saved_for_later_item">
+          <img src="../assets/web_cart_assets/mobile2.svg" >
+          <p class="saved_for_later_item_price">$99.50</p>
+          <p class="saved_for_later_item_title">GoPro HERO6 4K Action<br>Camera - Black</p>
+          <button class="move_to_cart_btn">
+            <img src="../assets/web_cart_assets/shopping_cart.svg">
+            <p>Move to cart</p>
+          </button>
+        </div>
+
+        <div class="saved_for_later_item">
+          <img src="../assets/web_cart_assets/smart_watch.svg" >
+          <p class="saved_for_later_item_price">$99.50</p>
+          <p class="saved_for_later_item_title">GoPro HERO6 4K Action<br>Camera - Black</p>
+          <button class="move_to_cart_btn">
+            <img src="../assets/web_cart_assets/shopping_cart.svg">
+            <p>Move to cart</p>
+          </button>
+        </div>
+
+        <div class="saved_for_later_item">
+          <img src="../assets/web_cart_assets/laptop.svg" >
+          <p class="saved_for_later_item_price">$99.50</p>
+          <p class="saved_for_later_item_title">GoPro HERO6 4K Action<br>Camera - Black</p>
+          <button class="move_to_cart_btn">
+            <img src="../assets/web_cart_assets/shopping_cart.svg">
+            <p>Move to cart</p>
+          </button>
+        </div>
+
+      </div>
+      <!-- saved for later section ended-->
+    </main>
+
+
+
+<!-- ****************** footer portion started **************** -->
+  <footer>
+  
+    <!-- *** (B)footer section *** -->
+
+    <div id="footer_section">
+
+      <!--1.media box-->
+      <div id="group552">
+
+        <!--logo starts here-->
+        <div id="footer_logo" class="logo">
+           <a href="#Home">
+           <img class="logo_symbol" src="../assets/footer-section-assets/logo-symbol.svg">
+           <img class="logo_txt" src="../assets/footer-section-assets/Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+        
+        <div id="media_text">
+          Best information about the company<br>
+          gies here but now lorem ipsum is
+        </div>
+
+        <div id="social_platforms"> 
+          <a href="#facebook"><img  class="social_platforms_icons"  src="../assets/footer-section-assets/facebook.svg" ></a>
+          <a href="#twitter"><img   class="social_platforms_icons"  src="../assets/footer-section-assets/twitter.svg"  ></a>
+          <a href="#linkeldin"><img class="social_platforms_icons"  src="../assets/footer-section-assets/linkedin.svg" ></a>
+          <a href="#instagram"><img class="social_platforms_icons"  src="../assets/footer-section-assets/instagram.svg"></a>
+          <a href="#youtube"><img   class="social_platforms_icons"  src="../assets/footer-section-assets/youtube.svg"  ></a>   
+        </div>
+
+      </div>
+      <!-- 2.About column-->
+      <div  id="col1">
+        <a class="bold_links" href="#">About</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 3.Partnership column-->
+      <div  id="col2">
+        <a class="bold_links" href="#">Partnership</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 4.Information column-->
+      <div  id="col3">
+        <a class="bold_links" href="#">Information</a>
+        <div class="col">
+          <a href="#">Help Center</a>
+          <a href="#">Money Refund</a>
+          <a href="#">Shipping</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+      <!-- 5.For users column-->
+      <div  id="col4">
+        <a class="bold_links" href="#">For users</a>
+
+        <div class="col">
+          <a href="../registration_system/login.html">login</a>
+          <a href="../registration_system/SignUp.html">Register</a>
+          <a href="#">Settings</a>
+          <a href="#">My Orders</a>
+        </div>
+      </div>
+      <!-- 6.Get app column-->
+      <div id="get_app">
+        <a id="get_app_text" href="#app">Get app</a> 
+        <a href="#Appstore">  <img class="mobile_app_effect" src="../assets/footer-section-assets/app_store.svg" ></a>
+        <a href="#Googleplay"><img class="mobile_app_effect" src="../assets/footer-section-assets/google_play.svg"></a>
+      </div>
+      <!-- 7.copyright box-->
+      <div id="group998">
+              <div id="copyright_and_lang">
+                <!---->
+                <div id="copyright_text">
+                  <a href="#copyright">© 2023 Ecommerce.</a>
+                </div>
+                <!--language selection--> 
+                
+                  <div id="language_selection">
+                    
+                    <div id="flagimage_box">
+                      <img id="selected_flag" src="../assets/footer-section-assets/english-flag-icon.svg"  >
+                      <p id="selected_lang">English</p>
+                      <img src="../assets/footer-section-assets/expand_less.svg"  >
+                    </div>
+                    <!-- Dropdown options -->
+                    <ul id="language_menu">
+                     <li>
+                        <img src="../assets/footer-section-assets/english-flag-icon.svg" > English
+                     </li>
+                     <li>
+                        <img src="../assets/footer-section-assets/italy-flag-icon.svg" > Italian
+                     </li>
+                     <li>
+                        <img src="../assets/footer-section-assets/france-flag-icon.svg" > French
+                     </li>
+                    </ul>                   
+                    <!---->
+                  </div>
+                
+                <!---->
+              </div>
+      </div>
+      <!---->
+
+    </div>
+
+
+  </footer>
+
+
+<!-- ****************** footer portion ended **************** -->
+
+
+
+
+
+<script>
+
+
+  /*######### footer section started ###########*/
+  const flagBox = document.getElementById('flagimage_box');
+  const langMenu = document.getElementById('language_menu');
+  const selectedFlag = document.getElementById('selected_flag');
+  const selectedLang = document.getElementById('selected_lang');
+
+  // Toggle dropdown on flag box click
+  flagBox.onclick = () => {
+    langMenu.style.display = (langMenu.style.display === 'block') ? 'none' : 'block';
+  };
+
+  // Loop through each <li> and add click event
+  document.querySelectorAll('#language_menu li').forEach(item => {
+    item.onclick = () => {
+      const img = item.querySelector('img').src;        // get flag image src
+      const lang = item.textContent.trim();             // get language name text
+
+      selectedFlag.src = img;                           // update selected flag
+      selectedLang.textContent = lang;                  // update selected language
+      langMenu.style.display = 'none';                  // close dropdown
+    };
+  });
+
+  // Hide dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!document.getElementById('language_selection').contains(e.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+  
+
+
+
+
+
+</script>
+
+    
+
+</body>
+</html>

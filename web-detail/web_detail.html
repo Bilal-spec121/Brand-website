@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="web_detail.css">
+  <title>web detail</title>
+</head>
+<body>
+
+<!-- ******** Header portion satrted ******** -->
+  <header>
+
+   <!--(A)first (top header)-->
+    <div id="top_header">
+      <!-- (1)logo section-->
+      
+        <!--logo starts here-->
+        <div  id="main_logo" class="logo">
+          <a href="../index.html">
+            <img id="main_logo_symbol" class="logo_symbol" src="../assets/header_section_assets//logo-symbol.svg">
+            <img id="main_logo_txt" class="logo_txt" src="../assets/header_section_assets//Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+      
+      <!---->
+      <!-- (2)Search section-->
+      <div id="search_container"> 
+          
+          <input id="input_srch" type="text" placeholder="Search">
+        
+          <select id="category_selector">
+            <option>All category</option>
+          </select>
+        
+          <button id="search_btn">Search</button>
+          
+      </div>
+      <!---->
+      <!-- (3)actions section-->
+      <div id="actions_container">
+          <div id="profile">
+            <img src="../assets/header_section_assets/profile.svg">
+            <a href="#">Profile</a> 
+          </div>
+          <div id="message">
+            <img src="../assets/header_section_assets/message.svg">
+            <a href="#">Message</a>
+          </div>
+          <div id="orders">
+            <img src="../assets/header_section_assets/orders.svg">
+            <a href="#">Orders</a>  
+          </div>
+          <div id="My_cart">
+            <img src="../assets/header_section_assets/shopping_cart.svg">
+            <a href="/web-cart/webcart.html">My cart</a>
+          </div>  
+      </div>
+      <!---->
+    </div>
+
+<!-- (B) second (navbar)-->
+    <nav id="nav_bar">
+      <!-- (1) nav items section -->
+      <div id="navlist">
+        <div id ="menu_and_category">
+          <a id="menu-icon"><img src="../assets/header_section_assets//menu_icon.svg"></a>
+          <a href="/web-listview/web_listview.html" id="navbar-item1">All category</a>
+        </div>
+        <a href="../index.html#section_sale" id="navbar-item2">Hot offers</a>
+        <a href="#" id="navbar-item3" onclick="gift_box_openModal()">Gift boxes</a>
+        <a href="#" id="navbar-item4">Projects</a>
+        <a href="#" id="navbar-item5">Menu item</a>
+        <select id="navbar_item_dropdown">
+          <option >Help</option>
+        </select>
+
+      </div>
+
+      <!--gift box started-->
+
+        <!-- Popup Modal -->
+        <div id="gift_box_modal" class="gift_box_modal">
+          <div class="gift_box_modal_content">
+            <!-- Close button -->
+            <span class="gift_box_close_btn" onclick="gift_box_closeModal()">✖</span>
+
+            <h2>🎁 Gift Boxes for Every Occasion</h2>
+            <p>Choose from our exclusive range of hand-picked gift boxes designed to celebrate life’s most precious moments.</p>
+
+            <!-- Grid of Gift Boxes -->
+            <div class="gift_box_grid">
+              <!-- Gift 1 -->
+              <div class="gift_box_item">
+                <img src="../assets/first-page-content-assets/birthday_box.png" alt="Birthday Box">
+                <h3>🎉 Birthday Bliss Box</h3>
+                <p>Includes candles, chocolates, a party hat, and a heartfelt card.</p>
+                <span class="gift_box_price">$29.99</span>
+                <button>Buy Now</button>
+              </div>
+
+              <!-- Gift 2 -->
+              <div class="gift_box_item">
+                <img src="../assets/first-page-content-assets/wedding_box.png" alt="Wedding Box">
+                <h3>💍 Wedding Elegance Box</h3>
+                <p>Includes champagne glasses, roses, and a personalized note.</p>
+                <span class="gift_box_price">$49.99</span>
+                <button>Buy Now</button>
+              </div>
+
+              <!-- Gift 3 -->
+              <div class="gift_box_item">
+                <img src="../assets/first-page-content-assets/holiday_box.png" alt="Holiday Box">
+                <h3>❄️ Holiday Cheer Box</h3>
+                <p>Includes cookies, socks, and hot cocoa mix.</p>
+                <span class="gift_box_price">$39.99</span>
+                <button>Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <script>
+      // Function to open popup
+      function gift_box_openModal() {
+        document.getElementById("gift_box_modal").style.display = "flex";
+      }
+
+      // Function to close popup
+      function gift_box_closeModal() {
+        document.getElementById("gift_box_modal").style.display = "none";
+      }
+      </script>
+      <!--gift box ended-->
+     
+      <!-- (2) language section -->
+      
+        <select name="languages" id="languages" class="inter-font">
+          <option value="English, USD" selected>English, USD</option>
+          <option value="Urdu">Urdu</option>
+          <option value="Bengali">Bengali</option>
+        </select>
+        
+      
+      <!-- (3) ship to section -->
+      <div id="ship_to">
+        <div  id="ship_text">Ship to</div>
+
+        <div id="country_selector">
+          <div class="selected">
+           <img src="../assets/header_section_assets//icon.svg" class="flag1" alt="Germany">
+           <img src="../assets/header_section_assets//expand_more.svg" class="icon1" alt="Dropdown">
+          </div>
+           <ul class="menu">
+            <li data-value="Germany"><img src="../assets/header_section_assets//icon.svg" class="flag1"> Germany</li>
+            <li data-value="France"><img src="../assets/header_section_assets//france-flag-icon.svg" class="flag1"> France</li>
+            <li data-value="Italy"><img src="../assets/header_section_assets//italy-flag-icon.svg" class="flag1"> Italy</li>
+           </ul>
+        </div>
+      </div>
+      <!---->
+
+    </nav>
+    
+   </header>
+ <!-- ****************** Header portion Ended **************** -->
+  
+
+
+
+
+
+
+
+
+
+
+<main>
+<!--Breadcrumb started-->
+
+<div id="bread_crumb">
+  <div id="nav_bread_crumb">
+
+    <p>Home</p>
+    <img src="../assets/web_detail_assets/chevron_right.svg" >
+    <p>Clothings</p>
+    <img src="../assets/web_detail_assets/chevron_right.svg" >
+    <p>Men's wear</p>
+    <img src="../assets/web_detail_assets/chevron_right.svg" >
+    <p>Summer clothing</p>
+
+  </div>
+</div>
+
+<!--Breadcrumb ended-->
+
+<!--(A) content main started-->
+<div id="content_main">
+  <!--1-->
+  <div id="group1004">
+    <img src="../assets/web_detail_assets/product_image.svg">
+  </div>
+  <!--2-->
+  <div id="gallery">
+    <div id="selected_image"><img src="../assets/web_detail_assets/gallery_image1.svg"></div>
+    <div class="gallery_images"><img src="../assets/web_detail_assets/gallery_image2.svg" ></div>
+    <div class="gallery_images"><img src="../assets/web_detail_assets/gallery_image3.svg" ></div>
+    <div class="gallery_images"><img src="../assets/web_detail_assets/gallery_image4.svg" ></div>
+    <div class="gallery_images"><img src="../assets/web_detail_assets/gallery_image5.svg" ></div>
+    <div class="gallery_images"><img src="../assets/web_detail_assets/gallery_image6.svg" ></div>
+  </div>
+  <!--3-->
+  <div id="info">
+    <!--a-->
+    <div id="info_aviable">
+      <img src="../assets/web_detail_assets/check.svg">
+      <p>In stock</p>
+    </div>
+    <!--b-->
+    <p id="title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</p>
+    <!--c-->
+    <div id="rating">
+
+      <div id="rating_misc">
+        <img src="../assets/web_detail_assets/rating_star.svg">
+        <img src="../assets/web_detail_assets/rating_star.svg">
+        <img src="../assets/web_detail_assets/rating_star.svg">
+        <img src="../assets/web_detail_assets/rating_star.svg">
+        <img src="../assets/web_detail_assets/gray_star.svg" >
+      </div>
+
+      <p id="gold_text">9.3</p>
+
+      <div id="dot1"></div>
+
+      <div id="reviews">
+        <img src="../assets/web_detail_assets/message.svg" >
+        <p>32 reviews</p>
+      </div>
+
+      <div id="dot2"></div>
+
+      <div id ="shopping-icon-holder">
+        <img src="../assets/web_detail_assets/shopping_basket.svg" >
+      </div>
+
+      <p id="simple_text">154 sold</p>
+
+    </div>
+    <!--d-->
+    <div id="trade_price">
+
+      <div id="group804">
+        <p id="g804_text1">$98.00</p>
+        <p id="g804_text2">50-100 pcs</p>
+      </div>
+      <div id="vertical_line1"></div>
+      <div id="group805">
+        <p id="g805_text1">$90.00</p>
+        <p id="g805_text2">100-700 pcs</p>
+      </div>
+      <div id="vertical_line2"></div>
+      <div id="group806">
+        <p id="g806_text1">$78.00</p>
+        <p id="g806_text2">700+ pcs</p>
+      </div>
+
+    </div>
+    <!--e-->
+    <div id="short_info">
+
+      <div id="short_info_price">
+        <p id="short_info_price_text1">Price:</p>
+        <p id="short_info_price_text2">Negotiable</p>
+      </div>
+
+      <div id="horizontal_line1"></div>
+      
+
+      <div id="short_info_type">
+        <p id="short_info_type_text1">Type:</p>
+        <p id="short_info_type_text2">Classic shoes</p>
+      </div>
+
+      <div id="short_info_material">
+        <p id="short_info_material_text1">Material:</p>
+        <p id="short_info_material_text2">Plastic material</p>
+      </div>
+
+      <div id="short_info_design">
+        <p id="short_info_design_text1">Design:</p>
+        <p id="short_info_design_text2">Modern nice</p>
+      </div>
+
+      <div id="horizontal_line2"></div>
+
+      <div id="short_info_customization">
+        <p id="short_info_customization_text1">Customization:</p>
+        <p id="short_info_customization_text2">Customized logo and<br>design custom packages</p>
+      </div>
+
+      <div id="short_info_protection">
+        <p id="short_info_protection_text1">Protection:</p>
+        <p id="short_info_protection_text2">Refund policy</p>
+      </div>
+
+      <div id="short_info_Warranty">
+        <p id="short_info_Warranty_text1">Warranty:</p>
+        <p id="short_info_Warranty_text2">2 years full warranty</p>
+      </div>
+
+      <div id="horizontal_line3"></div>
+
+
+    </div>
+
+
+
+  </div>
+  <!--4-->
+  <div id="seller_info">
+    <!--a-->
+    <div id="seller">
+      <img src="../assets/web_detail_assets/supplier_profile_img.svg" >
+      <p id="seller_text1">Supplier</p>
+      <p id="seller_text2">Guanjoi Trading LLC</p>
+    </div>
+    <!--b-->
+    <div id="line75"></div>
+
+    <!--c-->
+    <div id="location">
+      <img src="../assets/web_detail_assets/location_country_icon.svg" >
+      <p>Germany, Berlin</p>
+    </div>
+
+    <!--d-->
+    <div id="status">
+      <img src="../assets/web_detail_assets/verified_user.svg">
+      <p>Verified Seller</p>
+    </div>
+
+    <!--e-->
+    <div id="feature">
+      <img src="../assets/web_detail_assets/world.svg" >
+      <p>Worldwide shipping</p>
+    </div>
+
+    <!--f-->
+    <button id="send_inquiry">
+      Send inquiry
+    </button>
+
+    <!--g-->
+    <button id="Seller_profile">
+      Seller's profile
+    </button>
+
+  </div>
+  <!--5-->
+  <div id="order">
+    <img src="../assets/web_detail_assets/favorite.svg" >
+    <p>Save for later</p>
+  </div>
+  
+
+</div>
+
+<!-- content main ended -->
+<div id="block_detail_and_aside">
+  <!-- (B) Block detail started-->
+  
+   <div id="block_detail">
+    <!--frame 10-->
+    <div id="frame10">
+      <div class="selected_heading" id="frame10_heading1">Description</div>
+      <div id="frame10_heading2">Reviews</div>
+      <div id="frame10_heading3">Shipping</div>
+      <div id="frame10_heading4">About seller</div>
+    </div>
+    <!--a-->
+    <p id="block_detail_decription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <!--b-->
+    <div id="block_detail_infoleft">
+      <div class="components">
+        <div class="rectangle250a">Model</div>
+        <div class="rectangle250b">#8786867</div>
+      </div>
+      <div class="components">
+        <div class="rectangle250a">Style</div>
+        <div class="rectangle250b">Classic style</div>
+      </div>
+      <div class="components">
+        <div class="rectangle250a">Certificate</div>
+        <div class="rectangle250b">ISO-898921212</div>
+      </div>
+      <div class="components">
+        <div class="rectangle250a">Size</div>
+        <div class="rectangle250b">34mm x 450mm x 19mm</div>
+      </div>
+      <div class="components">
+        <div class="rectangle250a">Memory</div>
+        <div class="rectangle250b">36GB RAM</div>
+      </div>
+    </div>
+    <!--c-->
+    <div id="group828">
+      <div class="group828_feature">
+        <img src="../assets/web_detail_assets/description_check.svg" >
+        <p>Some great feature name here</p>
+      </div>
+
+       <div class="group828_feature">
+        <img src="../assets/web_detail_assets/description_check.svg" >
+        <p>Lorem ipsum dolor sit amet, consectetur </p>
+      </div>
+
+       <div class="group828_feature">
+        <img src="../assets/web_detail_assets/description_check.svg" >
+        <p>Duis aute irure dolor in reprehenderit</p>
+      </div>
+
+       <div class="group828_feature">
+        <img src="../assets/web_detail_assets/description_check.svg" >
+        <p>Some great feature name here</p>
+      </div>
+    </div>
+    <!---->
+
+  </div>
+
+  <!-- Block detail ended-->
+
+
+
+  <aside>
+
+    <div id="aside_items">
+
+      <p id="aside_items_tilte">You may like</p>
+
+      <div class="aside_items_item">
+        <img src="../assets/web_detail_assets/aside_item_1.svg" >
+        <p class="aside_items_item_title">Men Blazers Sets Elegant Formal</p>
+        <p class="aside_items_item_price">$7.00 - $99.50</p>
+      </div>
+
+      <div class="aside_items_item">
+        <img src="../assets/web_detail_assets/aside_item2.svg" >
+        <p class="aside_items_item_title">Men Shirt Sleeve Polo Contrast</p>
+        <p class="aside_items_item_price">$7.00 - $99.50</p>
+      </div>
+
+      <div class="aside_items_item">
+        <img src="../assets/web_detail_assets/aside_item3.svg" >
+        <p class="aside_items_item_title">Apple Watch Series Space Gray</p>
+        <p class="aside_items_item_price">$7.00 - $99.50</p>
+      </div>
+
+      <div class="aside_items_item">
+        <img src="../assets/web_detail_assets/aside_item4.svg" >
+        <p class="aside_items_item_title">Basketball Crew Socks Long Stuff</p>
+        <p class="aside_items_item_price">$7.00 - $99.50</p>
+      </div>
+
+      <div class="aside_items_item">
+        <img src="../assets/web_detail_assets/aside_item5.svg" >
+        <p class="aside_items_item_title">New Summer Men's castrol T-Shirts</p>
+        <p class="aside_items_item_price">$7.00 - $99.50</p>
+      </div>
+
+    </div>
+
+  </aside>
+  <!---->
+</div>
+<!--(C)  Block recommend  started-->
+<div id="block_recommend">
+
+  <p id="text_related_products">Related products</p>
+
+  <div id="item_container">
+
+    <div class="item">
+      <div class="item_image_holder">
+        <img src="../assets/web_detail_assets/wallet.svg" >
+      </div>
+      <div class="item_text_holder">
+        <p class="text_holder_text1">Xiaomi Redmi 8 Original</p>
+        <p class="text_holder_text2">$32.00-$40.00</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item_image_holder">
+        <img src="../assets/web_detail_assets/smart_watch.svg" >
+      </div>
+      <div class="item_text_holder">
+        <p class="text_holder_text1">Xiaomi Redmi 8 Original</p>
+        <p class="text_holder_text2">$32.00-$40.00</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item_image_holder">
+        <img src="../assets/web_detail_assets/headphones.svg" >
+      </div>
+      <div class="item_text_holder">
+        <p class="text_holder_text1">Xiaomi Redmi 8 Original</p>
+        <p class="text_holder_text2">$32.00-$40.00</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item_image_holder">
+        <img src="../assets/web_detail_assets/pant.svg" >
+      </div>
+      <div class="item_text_holder">
+        <p class="text_holder_text1">Xiaomi Redmi 8 Original</p>
+        <p class="text_holder_text2">$32.00-$40.00</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item_image_holder">
+        <img src="../assets/web_detail_assets/kettle.svg" >
+      </div>
+      <div class="item_text_holder">
+        <p class="text_holder_text1">Xiaomi Redmi 8 Original</p>
+        <p class="text_holder_text2">$32.00-$40.00</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item_image_holder">
+        <img src="../assets/web_detail_assets/house_item.svg" >
+      </div>
+      <div class="item_text_holder">
+        <p class="text_holder_text1">Xiaomi Redmi 8 Original</p>
+        <p class="text_holder_text2">$32.00-$40.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  Block recommend  ended-->
+
+
+
+<!-- (D) Banner started -->
+<div id="banner">
+  <div id="rectangle176"></div>
+  <div id="rectangle177"></div>
+  <p id="banner_name">Super discount on more than 100 USD</p>
+  <p id="banner_description">Have you ever finally just write dummy info</p>
+  <button id="banner_btn">Shop now</button>
+</div>
+<!--  Banner ended -->
+
+
+</main>
+
+
+
+
+
+
+<!-- *** (B)footer section *** -->
+
+    <div id="footer_section">
+
+      <!--1.media box-->
+      <div id="group552">
+
+        <!--logo starts here-->
+        <div id="footer_logo" class="logo">
+           <a href="#Home">
+           <img class="logo_symbol" src="../assets/footer-section-assets/logo-symbol.svg">
+           <img class="logo_txt" src="../assets/footer-section-assets/Brand.svg">
+          </a>
+        </div>
+        <!--logo ends here-->
+        
+        <div id="media_text">
+          Best information about the company<br>
+          gies here but now lorem ipsum is
+        </div>
+
+        <div id="social_platforms"> 
+          <a href="#facebook"><img  class="social_platforms_icons"  src="../assets/footer-section-assets/facebook.svg" ></a>
+          <a href="#twitter"><img   class="social_platforms_icons"  src="../assets/footer-section-assets/twitter.svg"  ></a>
+          <a href="#linkeldin"><img class="social_platforms_icons"  src="../assets/footer-section-assets/linkedin.svg" ></a>
+          <a href="#instagram"><img class="social_platforms_icons"  src="../assets/footer-section-assets/instagram.svg"></a>
+          <a href="#youtube"><img   class="social_platforms_icons"  src="../assets/footer-section-assets/youtube.svg"  ></a>   
+        </div>
+
+      </div>
+      <!-- 2.About column-->
+      <div  id="col1">
+        <a class="bold_links" href="#">About</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 3.Partnership column-->
+      <div  id="col2">
+        <a class="bold_links" href="#">Partnership</a>
+        <div class="col">
+          <a href="#">About Us</a>
+          <a href="#">Find store</a>
+          <a href="#">Categories</a>
+          <a href="#">Blogs</a>
+        </div>
+      </div>
+      <!-- 4.Information column-->
+      <div  id="col3">
+        <a class="bold_links" href="#">Information</a>
+        <div class="col">
+          <a href="#">Help Center</a>
+          <a href="#">Money Refund</a>
+          <a href="#">Shipping</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+      <!-- 5.For users column-->
+      <div  id="col4">
+        <a class="bold_links" href="#">For users</a>
+
+        <div class="col">
+          <a href="registration_system/login.html">login</a>
+          <a href="registration_system/SignUp.html">Register</a>
+          <a href="#">Settings</a>
+          <a href="#">My Orders</a>
+        </div>
+      </div>
+      <!-- 6.Get app column-->
+      <div id="get_app">
+        <a id="get_app_text" href="#app">Get app</a> 
+        <a href="#Appstore">  <img class="mobile_app_effect" src="../assets/footer-section-assets/app_store.svg" ></a>
+        <a href="#Googleplay"><img class="mobile_app_effect" src="../assets/footer-section-assets/google_play.svg"></a>
+      </div>
+      <!-- 7.copyright box-->
+      <div id="group998">
+              <div id="copyright_and_lang">
+                <!---->
+                <div id="copyright_text">
+                  <a href="#copyright">© 2023 Ecommerce.</a>
+                </div>
+                <!--language selection--> 
+                
+                  <div id="language_selection">
+                    
+                    <div id="flagimage_box">
+                      <img id="selected_flag" src="../assets/footer-section-assets/english-flag-icon.svg"  >
+                      <p id="selected_lang">English</p>
+                      <img src="../assets/footer-section-assets/expand_less.svg"  >
+                    </div>
+                    <!-- Dropdown options -->
+                    <ul id="language_menu">
+                     <li>
+                        <img src="../assets/footer-section-assets/english-flag-icon.svg" > English
+                     </li>
+                     <li>
+                        <img src="../assets/footer-section-assets/italy-flag-icon.svg" > Italian
+                     </li>
+                     <li>
+                        <img src="../assets/footer-section-assets/france-flag-icon.svg" > French
+                     </li>
+                    </ul>                   
+                    <!---->
+                  </div>
+                
+                <!---->
+              </div>
+      </div>
+      <!---->
+
+    </div>
+
+
+  </footer>
+
+
+<!-- ****************** footer portion ended **************** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const selector = document.getElementById('country_selector');
+const selected = selector.querySelector('.selected');
+const menu = selector.querySelector('.menu');
+
+selected.onclick = () => {
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+};
+
+menu.querySelectorAll('li').forEach(item => {
+  item.onclick = () => {
+    const flag = item.querySelector('img').src;
+    const country = item.dataset.value;
+    selected.innerHTML = `
+      <img src="${flag}" class="flag1" alt="${country}">
+      <img src="../assets/header_section_assets//expand_more.svg" class="icon1" alt="Dropdown">
+    `;
+    menu.style.display = 'none';
+  };
+});
+
+document.addEventListener('click', e => {
+  if (!selector.contains(e.target)) menu.style.display = 'none';
+});
+
+/*######### footer section started ###########*/
+  const flagBox = document.getElementById('flagimage_box');
+  const langMenu = document.getElementById('language_menu');
+  const selectedFlag = document.getElementById('selected_flag');
+  const selectedLang = document.getElementById('selected_lang');
+
+  // Toggle dropdown on flag box click
+  flagBox.onclick = () => {
+    langMenu.style.display = (langMenu.style.display === 'block') ? 'none' : 'block';
+  };
+
+  // Loop through each <li> and add click event
+  document.querySelectorAll('#language_menu li').forEach(item => {
+    item.onclick = () => {
+      const img = item.querySelector('img').src;        // get flag image src
+      const lang = item.textContent.trim();             // get language name text
+
+      selectedFlag.src = img;                           // update selected flag
+      selectedLang.textContent = lang;                  // update selected language
+      langMenu.style.display = 'none';                  // close dropdown
+    };
+  });
+
+  // Hide dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!document.getElementById('language_selection').contains(e.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+  
+</script>
+
+</body>
+</html>
